@@ -10,6 +10,10 @@ export default class Login extends Component {
       email: "",
       password: ""
     };
+    
+    this.validateForm = this.validateForm.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   validateForm() {
@@ -17,7 +21,6 @@ export default class Login extends Component {
   }
 
   handleChange(event) {
-    console.log(event.target.value)
     this.setState({
       [event.target.id]: event.target.value
     });
