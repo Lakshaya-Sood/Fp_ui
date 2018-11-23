@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl, ControlLabel, Navbar, Nav, NavItem } from "react-bootstrap";
 import "./Login.css";
 
 export default class Login extends Component {
@@ -17,6 +17,7 @@ export default class Login extends Component {
   }
 
   handleChange(event) {
+    console.log(event.target.value)
     this.setState({
       [event.target.id]: event.target.value
     });
@@ -29,6 +30,23 @@ export default class Login extends Component {
   render() {
     return (
       <div className="Login">
+      <Navbar collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a href="#brand">RevCo</a>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#">
+              Login
+            </NavItem>
+            <NavItem eventKey={2} href="#">
+              SignUp
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+        </Navbar>
         <form onSubmit={this.handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>

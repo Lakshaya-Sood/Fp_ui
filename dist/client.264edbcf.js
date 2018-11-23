@@ -39552,6 +39552,7 @@ var Login = function (_Component) {
   }, {
     key: "handleChange",
     value: function handleChange(event) {
+      console.log(event.target.value);
       this.setState(_defineProperty({}, event.target.id, event.target.value));
     }
   }, {
@@ -39565,6 +39566,41 @@ var Login = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "Login" },
+        _react2.default.createElement(
+          _reactBootstrap.Navbar,
+          { collapseOnSelect: true },
+          _react2.default.createElement(
+            _reactBootstrap.Navbar.Header,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Navbar.Brand,
+              null,
+              _react2.default.createElement(
+                "a",
+                { href: "#brand" },
+                "RevCo"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Navbar.Collapse,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Nav,
+              { pullRight: true },
+              _react2.default.createElement(
+                _reactBootstrap.NavItem,
+                { eventKey: 1, href: "#" },
+                "Login"
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.NavItem,
+                { eventKey: 2, href: "#" },
+                "SignUp"
+              )
+            )
+          )
+        ),
         _react2.default.createElement(
           "form",
           { onSubmit: this.handleSubmit },
@@ -39665,7 +39701,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '61862' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62840' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
