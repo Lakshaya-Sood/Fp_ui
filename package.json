@@ -9,6 +9,7 @@
     "express": "^4.16.2",
     "ignore-styles": "^5.0.1",
     "react": "^16.4.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
